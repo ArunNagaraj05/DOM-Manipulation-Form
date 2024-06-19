@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        input[type="checkbox"]{
+            margin-left: 85px;
+        }
+        input[type="radio"]{
+            margin-left: 35px;
+        }
+        .address-label{
+         display: inline-block;
+         text-align: center;
+		 float: left;
+        }
+        .form{
+            padding-top: 15px;
+            background-color: navajowhite;
+            color: black;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-left: 5px;
+        }
+    
+        table, th, td {
+           background-color: black;
+           border: 1px solid black;
+           border-collapse: collapse;
+           text-align: center;
+  }
+    </style>
+</head>
+<body>
+    
+    <form class="form" id="form" onsubmit="data(event)">
+        <h1 id="title">DOM Manipulation form</h1>
+        <div class="form-group">
+        <p id="description">The form is about customer details collected to provide an offer price for this Diwali...!</p>
+        <div class="first-name">
+        <label for="first-name">First name</label>
+        <input id="first-name" type="text" name="first-name" style="margin-left: 10px;" placeholder="Enter First name" value="">
+        </div>   
+        <br>
+        <div class="last-name">
+            <label for="last-name">Last name</label>
+            <input id="last-name" type="text" style="margin-left: 13px;" placeholder="Enter Last name">
+        </div>
+        <br>
+        <div class="email">
+            <label for="email">Email</label>
+            <input id="email" type="text" style="margin-left: 43px;" placeholder="Enter Email">
+        </div>
+        <br>
+        <div class="address">
+            <label for="address" class="address-label">Address</label>
+            <textarea id="address" class="address-text" type="text" style="margin-left: 34px; width: 230px;" placeholder="Enter Address"></textarea>
+        </div>
+        <br>
+        <div class="pincode">
+            <label for="pincode">Pincode</label>
+            <input id="pincode" type="text" style="margin-left: 30px;" placeholder="Enter Pincode">
+        </div>
+        <br>
+        <div id="gender" class="gender">
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+        <br>
+        <div id="food" class="food">
+            <label for="food">Choice of food:</label><br>
+            <input class="food" type="checkbox" name="food" value="briyani"> Briyani<br>
+            <input class="food" type="checkbox" name="food" value="north-indian-meal"> North Indian meal<br>
+            <input class="food" type="checkbox" name="food" value="south-indian-meal"> South Indian meal<br>
+            <input class="food" type="checkbox" name="food" value="pasta"> Pasta<br>
+            <input class="food" type="checkbox" name="food" value="mushroom-briyani"> Italian
+        </div>
+        <br>
+        <div class="state">
+            <label for="state">State</label>
+            <input id="state" type="text" style="margin-left: 45px;" placeholder="Enter State">
+        </div>
+        <br>
+        <div class="country">
+            <label for="country">Country</label>
+            <input id="country" type="text" style="margin-left: 26px;" placeholder="Enter Country">
+        </div>
+        <br>
+        <input type="button" id="submit" class="btn btn-primary" onclick="getCheckbox()" value="Submit">
+        <input type="reset" id="reset" class="btn btn-secondary" value="Reset">
+    </div>
+    </form>
+    <br>
+    <table class="table" style="height: 100%; width: 100%;">
+        <thead>
+          <tr>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Choice of foods</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+          </tr>
+        </thead>
+        <tbody id="data">
+
+          </tr>
+        </tbody>
+      </table>
+<script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
